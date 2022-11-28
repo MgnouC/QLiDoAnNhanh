@@ -49,11 +49,16 @@
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\BillInfoDAO.cs" />
+    <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\FoodDAO.cs" />
     <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DAO\TableDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\BillInfo.cs" />
+    <Compile Include="DTO\Category.cs" />
+    <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\Menu.cs" />
     <Compile Include="DTO\Table.cs" />
     <Compile Include="fAccountProfile.cs">
@@ -104,6 +109,12 @@
     <Compile Include="fTaiKhoan.Designer.cs">
       <DependentUpon>fTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="fThemThucAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemThucAn.Designer.cs">
+      <DependentUpon>fThemThucAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThucAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fTaiKhoan.resx">
       <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemThucAn.resx">
+      <DependentUpon>fThemThucAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThucAn.resx">
       <DependentUpon>fThucAn.cs</DependentUpon>

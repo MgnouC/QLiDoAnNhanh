@@ -11,12 +11,15 @@ namespace QuanLyBanDoAnNhanh.DTO
     public class Bill
     {
      
-    public Bill(int id, DateTime? dateCheckin, DateTime? dataCheckOut, int status)
+    public Bill(int id, DateTime? dateCheckin, DateTime? dataCheckOut, int status, int discount = 0)
         {
             this.ID = id;
             this.DateCheckIn = dateCheckin;
             this.DateCheckOut = dateCheckOut;
             this.Status = status;
+            this.Discount = discount;
+        //    this.TotalPrice = totalPrice;
+             
         }
 
         public Bill(DataRow row)
@@ -24,11 +27,25 @@ namespace QuanLyBanDoAnNhanh.DTO
             this.ID = (int)row["id"];
             this.DateCheckIn = (DateTime?)row["dateCheckin"];
             var dateCheckOutTemp = row["dateCheckOut"];
-            if(dateCheckOutTemp != "")
+            if(dateCheckOutTemp.ToString() != "")
             this.DateCheckOut = (DateTime?)dateCheckOutTemp;
             this.Status = (int)row["status"];
+            this.Discount = (int)row["discount"];
+         //   this.TotalPrice = (float)Convert.ToDouble(row["totalPrice"].ToString()); 
         }
 
+      /*  private float totalPrice;
+        public float TotalPrice
+        {
+            get { return totalPrice; }
+            set { totalPrice = value; }
+        }*/
+        private int discount;
+        public int Discount
+        {
+            get { return discount; }
+            set { discount = value; }
+        }
         private int status;
         public int Status
         {

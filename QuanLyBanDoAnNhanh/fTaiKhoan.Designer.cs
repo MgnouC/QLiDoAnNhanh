@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnResetPassWord = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cbAccountType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txbDisplayName = new System.Windows.Forms.TextBox();
@@ -45,7 +45,7 @@
             this.btnAddAccount = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
-            this.btnResetPassWord = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -53,6 +53,7 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -66,22 +67,26 @@
             this.panel4.Size = new System.Drawing.Size(322, 373);
             this.panel4.TabIndex = 13;
             // 
+            // btnResetPassWord
+            // 
+            this.btnResetPassWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnResetPassWord.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetPassWord.Location = new System.Drawing.Point(89, 198);
+            this.btnResetPassWord.Name = "btnResetPassWord";
+            this.btnResetPassWord.Size = new System.Drawing.Size(150, 63);
+            this.btnResetPassWord.TabIndex = 5;
+            this.btnResetPassWord.Text = "Đặt lại mật khẩu";
+            this.btnResetPassWord.UseVisualStyleBackColor = false;
+            this.btnResetPassWord.Click += new System.EventHandler(this.btnResetPassWord_Click);
+            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.cbAccountType);
+            this.panel3.Controls.Add(this.numericUpDown1);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(3, 126);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(320, 47);
             this.panel3.TabIndex = 4;
-            // 
-            // cbAccountType
-            // 
-            this.cbAccountType.FormattingEnabled = true;
-            this.cbAccountType.Location = new System.Drawing.Point(136, 18);
-            this.cbAccountType.Name = "cbAccountType";
-            this.cbAccountType.Size = new System.Drawing.Size(163, 21);
-            this.cbAccountType.TabIndex = 1;
             // 
             // label3
             // 
@@ -132,7 +137,6 @@
             // 
             this.txbUserName.Location = new System.Drawing.Point(136, 19);
             this.txbUserName.Name = "txbUserName";
-            this.txbUserName.ReadOnly = true;
             this.txbUserName.Size = new System.Drawing.Size(163, 20);
             this.txbUserName.TabIndex = 1;
             // 
@@ -145,7 +149,6 @@
             this.label2.Size = new System.Drawing.Size(123, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên tài khoản:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
@@ -179,6 +182,7 @@
             this.btnEditAccount.TabIndex = 2;
             this.btnEditAccount.Text = "Sửa";
             this.btnEditAccount.UseVisualStyleBackColor = false;
+            this.btnEditAccount.Click += new System.EventHandler(this.btnEditAccount_Click_1);
             // 
             // btnDeleteAccount
             // 
@@ -190,6 +194,7 @@
             this.btnDeleteAccount.TabIndex = 1;
             this.btnDeleteAccount.Text = "Xóa";
             this.btnDeleteAccount.UseVisualStyleBackColor = false;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click_1);
             // 
             // btnAddAccount
             // 
@@ -201,6 +206,7 @@
             this.btnAddAccount.TabIndex = 0;
             this.btnAddAccount.Text = "Thêm";
             this.btnAddAccount.UseVisualStyleBackColor = false;
+            this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click_1);
             // 
             // panel1
             // 
@@ -218,16 +224,17 @@
             this.dtgvAccount.Size = new System.Drawing.Size(459, 369);
             this.dtgvAccount.TabIndex = 0;
             // 
-            // btnResetPassWord
+            // numericUpDown1
             // 
-            this.btnResetPassWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnResetPassWord.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetPassWord.Location = new System.Drawing.Point(89, 198);
-            this.btnResetPassWord.Name = "btnResetPassWord";
-            this.btnResetPassWord.Size = new System.Drawing.Size(150, 63);
-            this.btnResetPassWord.TabIndex = 5;
-            this.btnResetPassWord.Text = "Đặt lại mật khẩu";
-            this.btnResetPassWord.UseVisualStyleBackColor = false;
+            this.numericUpDown1.Location = new System.Drawing.Point(162, 21);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 1;
             // 
             // fTaiKhoan
             // 
@@ -250,6 +257,7 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,7 +267,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnResetPassWord;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox cbAccountType;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txbDisplayName;
@@ -274,5 +281,6 @@
         private System.Windows.Forms.Button btnAddAccount;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dtgvAccount;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

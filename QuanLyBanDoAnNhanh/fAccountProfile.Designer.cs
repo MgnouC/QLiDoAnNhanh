@@ -151,6 +151,7 @@
             this.txbNewPass.Name = "txbNewPass";
             this.txbNewPass.Size = new System.Drawing.Size(188, 20);
             this.txbNewPass.TabIndex = 1;
+            this.txbNewPass.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -177,6 +178,7 @@
             this.txbReEnterPass.Name = "txbReEnterPass";
             this.txbReEnterPass.Size = new System.Drawing.Size(188, 20);
             this.txbReEnterPass.TabIndex = 1;
+            this.txbReEnterPass.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -187,7 +189,6 @@
             this.label5.Size = new System.Drawing.Size(158, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Nhập lại mật khẩu:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // btnUpdate
             // 
@@ -199,6 +200,7 @@
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -229,7 +231,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(109, 87);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // fAccountProfile
             // 

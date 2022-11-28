@@ -31,5 +31,32 @@ namespace QuanLyBanDoAnNhanh.DAO
             }
             return -1;
         }
+
+        public void CheckOut(int id, int discount, float totalPrice)
+        {
+            string query = "Update dbo.Bill set dateCheckOut = getdate(), status = 1, " + "discount = " + discount + ", totalPrice = " + totalPrice + " where id =  " + id;
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+
+        public void InsertBill(int id)
+        {
+            DataProvider.Instance.ExecuteQuery("exec USP_InsertBill @idTable", new object[] { id });
+        }
+        public DataTable GetBillListByDate(DateTime checkIn, DateTime checkOut)
+        {
+            return DataProvider.Instance.ExecuteQuery("exec USP_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
+        }
+
+        public int GetMaxIDBill()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("select max(id) from dbo.Bill");
+            }
+            catch
+            {
+                return 1;
+            }
+        }
     }
 }

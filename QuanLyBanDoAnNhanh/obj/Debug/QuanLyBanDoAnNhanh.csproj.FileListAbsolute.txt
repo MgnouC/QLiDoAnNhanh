@@ -18,3 +18,4 @@ C:\Users\Admin\source\repos\QuanLyBanDoAnNhanh\QuanLyBanDoAnNhanh\obj\Debug\Quan
 C:\Users\Admin\source\repos\QuanLyBanDoAnNhanh\QuanLyBanDoAnNhanh\obj\Debug\QuanLyBanDoAnNhanh.fTaiKhoan.resources
 C:\Users\Admin\source\repos\QuanLyBanDoAnNhanh\QuanLyBanDoAnNhanh\obj\Debug\QuanLyBanDoAnNhanh.fThucAn.resources
 C:\Users\Admin\source\repos\QuanLyBanDoAnNhanh\QuanLyBanDoAnNhanh\obj\Debug\QuanLyBanDoAnNhanh.fGioiThieu.resources
+C:\Users\Admin\source\repos\QuanLyBanDoAnNhanh\QuanLyBanDoAnNhanh\obj\Debug\QuanLyBanDoAnNhanh.fThemThucAn.resources

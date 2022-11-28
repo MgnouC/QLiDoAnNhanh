@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.dtgvFood = new System.Windows.Forms.DataGridView();
-            this.btnAddFood = new System.Windows.Forms.Button();
-            this.btnDeleteFood = new System.Windows.Forms.Button();
-            this.btnEditFood = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnShowFood = new System.Windows.Forms.Button();
-            this.btnSearchFood = new System.Windows.Forms.Button();
+            this.btnEditFood = new System.Windows.Forms.Button();
+            this.btnDeleteFood = new System.Windows.Forms.Button();
+            this.btnADDFood = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.txbSearchFoodName = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txbFoodID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnSearchFood = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.nmFoodPrice = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.cbFoodCategory = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txbFoodName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
-            this.nmFoodPrice = new System.Windows.Forms.NumericUpDown();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txbFoodID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodPrice)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,16 +71,72 @@
             this.panel1.Size = new System.Drawing.Size(464, 372);
             this.panel1.TabIndex = 0;
             // 
+            // dtgvFood
+            // 
+            this.dtgvFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvFood.Location = new System.Drawing.Point(3, 2);
+            this.dtgvFood.Name = "dtgvFood";
+            this.dtgvFood.Size = new System.Drawing.Size(459, 369);
+            this.dtgvFood.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnShowFood);
             this.panel2.Controls.Add(this.btnEditFood);
             this.panel2.Controls.Add(this.btnDeleteFood);
-            this.panel2.Controls.Add(this.btnAddFood);
+            this.panel2.Controls.Add(this.btnADDFood);
             this.panel2.Location = new System.Drawing.Point(5, 381);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(463, 68);
             this.panel2.TabIndex = 1;
+            // 
+            // btnShowFood
+            // 
+            this.btnShowFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnShowFood.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowFood.Location = new System.Drawing.Point(330, 3);
+            this.btnShowFood.Name = "btnShowFood";
+            this.btnShowFood.Size = new System.Drawing.Size(130, 63);
+            this.btnShowFood.TabIndex = 3;
+            this.btnShowFood.Text = "Xem";
+            this.btnShowFood.UseVisualStyleBackColor = false;
+            this.btnShowFood.Click += new System.EventHandler(this.btnShowFood_Click);
+            // 
+            // btnEditFood
+            // 
+            this.btnEditFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnEditFood.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditFood.Location = new System.Drawing.Point(221, 3);
+            this.btnEditFood.Name = "btnEditFood";
+            this.btnEditFood.Size = new System.Drawing.Size(103, 63);
+            this.btnEditFood.TabIndex = 2;
+            this.btnEditFood.Text = "Sửa";
+            this.btnEditFood.UseVisualStyleBackColor = false;
+            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
+            // 
+            // btnDeleteFood
+            // 
+            this.btnDeleteFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDeleteFood.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteFood.Location = new System.Drawing.Point(112, 3);
+            this.btnDeleteFood.Name = "btnDeleteFood";
+            this.btnDeleteFood.Size = new System.Drawing.Size(103, 63);
+            this.btnDeleteFood.TabIndex = 1;
+            this.btnDeleteFood.Text = "Xóa";
+            this.btnDeleteFood.UseVisualStyleBackColor = false;
+            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click);
+            // 
+            // btnADDFood
+            // 
+            this.btnADDFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnADDFood.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnADDFood.Location = new System.Drawing.Point(3, 3);
+            this.btnADDFood.Name = "btnADDFood";
+            this.btnADDFood.Size = new System.Drawing.Size(103, 63);
+            this.btnADDFood.TabIndex = 0;
+            this.btnADDFood.Text = "Thêm";
+            this.btnADDFood.UseVisualStyleBackColor = false;
+            this.btnADDFood.Click += new System.EventHandler(this.btnADDFood_Click);
             // 
             // panel3
             // 
@@ -90,6 +146,25 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(324, 60);
             this.panel3.TabIndex = 2;
+            // 
+            // txbSearchFoodName
+            // 
+            this.txbSearchFoodName.Location = new System.Drawing.Point(19, 20);
+            this.txbSearchFoodName.Name = "txbSearchFoodName";
+            this.txbSearchFoodName.Size = new System.Drawing.Size(195, 20);
+            this.txbSearchFoodName.TabIndex = 4;
+            // 
+            // btnSearchFood
+            // 
+            this.btnSearchFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnSearchFood.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchFood.Location = new System.Drawing.Point(220, 11);
+            this.btnSearchFood.Name = "btnSearchFood";
+            this.btnSearchFood.Size = new System.Drawing.Size(103, 34);
+            this.btnSearchFood.TabIndex = 3;
+            this.btnSearchFood.Text = "Tìm kiếm";
+            this.btnSearchFood.UseVisualStyleBackColor = false;
+            this.btnSearchFood.Click += new System.EventHandler(this.btnSearchFood_Click);
             // 
             // panel4
             // 
@@ -102,102 +177,64 @@
             this.panel4.Size = new System.Drawing.Size(322, 373);
             this.panel4.TabIndex = 3;
             // 
-            // dtgvFood
+            // panel8
             // 
-            this.dtgvFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvFood.Location = new System.Drawing.Point(3, 2);
-            this.dtgvFood.Name = "dtgvFood";
-            this.dtgvFood.Size = new System.Drawing.Size(459, 369);
-            this.dtgvFood.TabIndex = 0;
+            this.panel8.Controls.Add(this.nmFoodPrice);
+            this.panel8.Controls.Add(this.label4);
+            this.panel8.Location = new System.Drawing.Point(3, 178);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(320, 47);
+            this.panel8.TabIndex = 5;
             // 
-            // btnAddFood
+            // nmFoodPrice
             // 
-            this.btnAddFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAddFood.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.Location = new System.Drawing.Point(3, 3);
-            this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(103, 63);
-            this.btnAddFood.TabIndex = 0;
-            this.btnAddFood.Text = "Thêm";
-            this.btnAddFood.UseVisualStyleBackColor = false;
+            this.nmFoodPrice.Location = new System.Drawing.Point(111, 22);
+            this.nmFoodPrice.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.nmFoodPrice.Name = "nmFoodPrice";
+            this.nmFoodPrice.Size = new System.Drawing.Size(188, 20);
+            this.nmFoodPrice.TabIndex = 1;
+            this.nmFoodPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnDeleteFood
+            // label4
             // 
-            this.btnDeleteFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDeleteFood.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteFood.Location = new System.Drawing.Point(112, 3);
-            this.btnDeleteFood.Name = "btnDeleteFood";
-            this.btnDeleteFood.Size = new System.Drawing.Size(103, 63);
-            this.btnDeleteFood.TabIndex = 1;
-            this.btnDeleteFood.Text = "Xóa";
-            this.btnDeleteFood.UseVisualStyleBackColor = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(29, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Giá:";
             // 
-            // btnEditFood
+            // panel7
             // 
-            this.btnEditFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnEditFood.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditFood.Location = new System.Drawing.Point(221, 3);
-            this.btnEditFood.Name = "btnEditFood";
-            this.btnEditFood.Size = new System.Drawing.Size(103, 63);
-            this.btnEditFood.TabIndex = 2;
-            this.btnEditFood.Text = "Sửa";
-            this.btnEditFood.UseVisualStyleBackColor = false;
+            this.panel7.Controls.Add(this.cbFoodCategory);
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Location = new System.Drawing.Point(3, 125);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(320, 47);
+            this.panel7.TabIndex = 4;
             // 
-            // btnShowFood
+            // cbFoodCategory
             // 
-            this.btnShowFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnShowFood.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowFood.Location = new System.Drawing.Point(330, 3);
-            this.btnShowFood.Name = "btnShowFood";
-            this.btnShowFood.Size = new System.Drawing.Size(130, 63);
-            this.btnShowFood.TabIndex = 3;
-            this.btnShowFood.Text = "Xem";
-            this.btnShowFood.UseVisualStyleBackColor = false;
+            this.cbFoodCategory.FormattingEnabled = true;
+            this.cbFoodCategory.Location = new System.Drawing.Point(111, 17);
+            this.cbFoodCategory.Name = "cbFoodCategory";
+            this.cbFoodCategory.Size = new System.Drawing.Size(188, 21);
+            this.cbFoodCategory.TabIndex = 1;
             // 
-            // btnSearchFood
+            // label3
             // 
-            this.btnSearchFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnSearchFood.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchFood.Location = new System.Drawing.Point(220, 11);
-            this.btnSearchFood.Name = "btnSearchFood";
-            this.btnSearchFood.Size = new System.Drawing.Size(103, 34);
-            this.btnSearchFood.TabIndex = 3;
-            this.btnSearchFood.Text = "Tìm kiếm";
-            this.btnSearchFood.UseVisualStyleBackColor = false;
-            // 
-            // txbSearchFoodName
-            // 
-            this.txbSearchFoodName.Location = new System.Drawing.Point(19, 20);
-            this.txbSearchFoodName.Name = "txbSearchFoodName";
-            this.txbSearchFoodName.Size = new System.Drawing.Size(195, 20);
-            this.txbSearchFoodName.TabIndex = 4;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.txbFoodID);
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(320, 47);
-            this.panel5.TabIndex = 2;
-            // 
-            // txbFoodID
-            // 
-            this.txbFoodID.Location = new System.Drawing.Point(111, 19);
-            this.txbFoodID.Name = "txbFoodID";
-            this.txbFoodID.ReadOnly = true;
-            this.txbFoodID.Size = new System.Drawing.Size(188, 20);
-            this.txbFoodID.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ID:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Danh mục:";
             // 
             // panel6
             // 
@@ -225,64 +262,33 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên món: ";
             // 
-            // panel7
+            // panel5
             // 
-            this.panel7.Controls.Add(this.cbCategory);
-            this.panel7.Controls.Add(this.label3);
-            this.panel7.Location = new System.Drawing.Point(3, 125);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(320, 47);
-            this.panel7.TabIndex = 4;
+            this.panel5.Controls.Add(this.txbFoodID);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(320, 47);
+            this.panel5.TabIndex = 2;
             // 
-            // label3
+            // txbFoodID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Danh mục:";
+            this.txbFoodID.Location = new System.Drawing.Point(111, 19);
+            this.txbFoodID.Name = "txbFoodID";
+            this.txbFoodID.ReadOnly = true;
+            this.txbFoodID.Size = new System.Drawing.Size(188, 20);
+            this.txbFoodID.TabIndex = 1;
+            this.txbFoodID.TextChanged += new System.EventHandler(this.txbFoodID_TextChanged);
             // 
-            // panel8
+            // label2
             // 
-            this.panel8.Controls.Add(this.nmFoodPrice);
-            this.panel8.Controls.Add(this.label4);
-            this.panel8.Location = new System.Drawing.Point(3, 178);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(320, 47);
-            this.panel8.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Giá:";
-            // 
-            // cbCategory
-            // 
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(111, 17);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(188, 21);
-            this.cbCategory.TabIndex = 1;
-            // 
-            // nmFoodPrice
-            // 
-            this.nmFoodPrice.Location = new System.Drawing.Point(111, 22);
-            this.nmFoodPrice.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.nmFoodPrice.Name = "nmFoodPrice";
-            this.nmFoodPrice.Size = new System.Drawing.Size(188, 20);
-            this.nmFoodPrice.TabIndex = 1;
-            this.nmFoodPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ID:";
             // 
             // fThucAn
             // 
@@ -297,20 +303,20 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý Thức ăn";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodPrice)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -323,7 +329,7 @@
         private System.Windows.Forms.Button btnShowFood;
         private System.Windows.Forms.Button btnEditFood;
         private System.Windows.Forms.Button btnDeleteFood;
-        private System.Windows.Forms.Button btnAddFood;
+        private System.Windows.Forms.Button btnADDFood;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txbSearchFoodName;
         private System.Windows.Forms.Button btnSearchFood;
@@ -332,7 +338,7 @@
         private System.Windows.Forms.NumericUpDown nmFoodPrice;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.ComboBox cbFoodCategory;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txbFoodName;

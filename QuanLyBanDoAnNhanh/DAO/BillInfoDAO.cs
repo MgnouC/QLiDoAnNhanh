@@ -19,6 +19,11 @@ namespace QuanLyBanDoAnNhanh.DAO
         }
         private BillInfoDAO() { }
 
+        public void DeleteBillInfoByFoodID(int id)
+        {
+            DataProvider.Instance.ExecuteQuery("delete dbo.BillInfo where idFood = " + id);
+        }
+
         public List<BillInfo> GetListBillInfo(int id)
         {
             List<BillInfo> listBillInfo = new List<BillInfo>();
@@ -30,6 +35,11 @@ namespace QuanLyBanDoAnNhanh.DAO
                 listBillInfo.Add(info);
             }
             return listBillInfo;
+        }
+
+        public void InsertBillInfo(int idBill, int idFood, int count)
+        {
+            DataProvider.Instance.ExecuteQuery("exec USP_InsertBillInfo @idBill , @idFood , @count", new object[] { idBill, idFood, count });
         }
     }
 }
